@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- video element jisme screen capture display kiya jayega -->
+<video id="video" width="640" height="480" autoplay></video>
+
+<script>
+  // video element ko select kare
+  const video = document.getElementById('video');
+
+  // screen capture ke liye media stream ko capture kare
+  navigator.mediaDevices.getDisplayMedia({ video: true })
+    .then(function(stream) {
+      // video element ko screen capture stream se attach kare
+      video.srcObject = stream;
+    })
+    .catch(function(error) {
+      console.error('Error capturing screen:', error);
+    });
+    
+ location. reload()
+
+    
+</script>
+</body>
+</html>
